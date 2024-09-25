@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana-Stuffed Aquafaba French Toast</title>
+    <link rel="stylesheet" href="method.css">
+</head>
+<body>
+
+    <h1>Banana-Stuffed Aquafaba French Toast</h1>
+    
+    <!-- Recipe Description -->
+    <div class="recipe-description">
+        <p>Banana-Stuffed Aquafaba French Toast is a delicious and vegan-friendly twist on a classic breakfast favorite. With creamy banana filling and a light, crispy exterior, this dish is perfect for a special brunch or a cozy breakfast at home.</p>
+   
+
+    <!-- Ingredients Section -->
+    <h2>Ingredients</h2>
+    <ul>
+        <!-- For the Stuffing -->
+        <li>2 ripe bananas, mashed</li>
+        <li>2 tablespoons maple syrup</li>
+        <li>1/2 teaspoon ground cinnamon</li>
+        
+        <!-- For the French Toast Batter -->
+        <li>1/2 cup aquafaba (chickpea brine)</li>
+        <li>1/4 cup non-dairy milk (such as almond, soy, or oat milk)</li>
+        <li>1 tablespoon ground flaxseed</li>
+        <li>1 tablespoon maple syrup</li>
+        <li>1 teaspoon vanilla extract</li>
+        <li>1/2 teaspoon ground cinnamon</li>
+        <li>1/4 teaspoon salt</li>
+        
+        <!-- For Cooking and Serving -->
+        <li>6 slices of bread (use your favorite type, preferably stale or slightly dry)</li>
+        <li>Vegan butter or oil for frying</li>
+        <li>Additional maple syrup for serving</li>
+        <li>Fresh fruit or powdered sugar for garnish (optional)</li>
+    </ul>
+
+    <!-- Method Section -->
+    <h2>Method</h2>
+    <ol>
+        <!-- Prepare the Banana Stuffing -->
+        <li>In a bowl, mix together the mashed bananas, maple syrup, and ground cinnamon until well combined. Set aside.</li>
+        
+        <!-- Prepare the French Toast Batter -->
+        <li>In a shallow dish, whisk together the aquafaba, non-dairy milk, ground flaxseed, maple syrup, vanilla extract, ground cinnamon, and salt until smooth.</li>
+        
+        <!-- Assemble and Cook -->
+        <li>Spread a generous amount of the banana mixture on one slice of bread, then top with another slice to make a sandwich. Repeat with the remaining bread and filling.</li>
+        <li>Heat a non-stick skillet or griddle over medium heat and lightly grease with vegan butter or oil.</li>
+        <li>Dip each sandwich in the French toast batter, coating both sides well.</li>
+        <li>Cook the sandwiches in the skillet for 3-4 minutes per side, or until golden brown and crispy. Add more butter or oil to the pan as needed.</li>
+        
+        <!-- Serve -->
+        <li>Serve the banana-stuffed French toast warm, drizzled with maple syrup and garnished with fresh fruit or powdered sugar if desired.</li>
+    </ol>
+
+    <a href="recipe2.html">Back to Recipes</a>
+</div>
+</body>
+</html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-description, ul, ol {
+    margin: 20px 0;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Changer</title>
+    <style>
+        
+        .font-selector {
+            margin-bottom: 600px; /* Space below the font selector */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+        }
+
+        label {
+            font-size: 1.2em; /* Larger font size for the label */
+            margin-right: 10px; /* Space between label and dropdown */
+            color: #4a4a4a; /* Color for the label */
+        }
+
+        select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 1em; /* Font size for the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #4a90e2; /* Border color */
+            background-color: #ffffff; /* Background color for the dropdown */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        select:hover {
+            border-color: #007bff; /* Change border color on hover */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover */
+        }
+
+        option {
+            padding: 10px; /* Space inside options */
+        }
+    </style>
+</head>
+<body>
+    <div class="font-selector">
+        <label for="font-style-select">Select Font Style:</label>
+        <select id="font-style-select">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Georgia', serif">Georgia</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Tahoma', sans-serif">Tahoma</option>
+            <option value="'Verdana', sans-serif">Verdana</option>
+        </select>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fontStyleSelect = document.getElementById('font-style-select');
+
+            // Load saved font style from local storage
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.body.style.fontFamily = savedFont;
+                fontStyleSelect.value = savedFont; // Set the dropdown to the saved font
+            }
+
+            const changeFontStyle = () => {
+                document.body.style.fontFamily = fontStyleSelect.value; // Change font style
+                localStorage.setItem('selectedFont', fontStyleSelect.value); // Save font style to local storage
+            };
+
+            fontStyleSelect.addEventListener('click', changeFontStyle);
+            fontStyleSelect.addEventListener('change', changeFontStyle);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>

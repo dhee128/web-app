@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Cream Pie</title>
+    <link rel="stylesheet" href="method.css">
+</head>
+<body>
+
+    <h1>Banana Cream Pie</h1>
+    
+    <!-- Recipe Description -->
+    <div class="recipe-description">
+        <p>Banana Cream Pie is a classic dessert featuring a creamy banana filling nestled in a buttery pie crust and topped with whipped cream. It’s a delightful treat that's perfect for any occasion, bringing together the flavors of ripe bananas and rich vanilla cream.</p>
+    
+
+    <!-- Ingredients Section -->
+    <h2>Ingredients</h2>
+    <ul>
+        <!-- For the Pie Crust -->
+        <li>1 1/2 cups graham cracker crumbs</li>
+        <li>1/4 cup granulated sugar</li>
+        <li>1/2 cup unsalted butter, melted</li>
+        
+        <!-- For the Banana Cream Filling -->
+        <li>3 large ripe bananas</li>
+        <li>1/2 cup granulated sugar</li>
+        <li>1/4 cup all-purpose flour</li>
+        <li>1/4 teaspoon salt</li>
+        <li>2 cups whole milk</li>
+        <li>3 large egg yolks</li>
+        <li>2 tablespoons unsalted butter</li>
+        <li>1 teaspoon vanilla extract</li>
+        
+        <!-- For the Whipped Cream Topping -->
+        <li>1 cup heavy cream</li>
+        <li>2 tablespoons powdered sugar</li>
+        <li>1 teaspoon vanilla extract</li>
+    </ul>
+
+    <!-- Method Section -->
+    <h2>Method</h2>
+    <ol>
+        <!-- Prepare the Pie Crust -->
+        <li>Preheat your oven to 350°F (175°C).</li>
+        <li>In a medium bowl, combine graham cracker crumbs, granulated sugar, and melted butter. Mix until well combined.</li>
+        <li>Press the mixture into the bottom and up the sides of a 9-inch pie pan. Bake for 8-10 minutes or until lightly golden. Allow to cool completely.</li>
+        
+        <!-- Prepare the Banana Cream Filling -->
+        <li>Slice the bananas and arrange them in an even layer over the cooled pie crust.</li>
+        <li>In a medium saucepan, whisk together granulated sugar, flour, and salt. Gradually whisk in the milk.</li>
+        <li>Cook over medium heat, whisking constantly, until the mixture comes to a boil and thickens.</li>
+        <li>In a small bowl, lightly beat the egg yolks. Gradually add a small amount of the hot mixture to the yolks, then whisk the yolk mixture back into the saucepan.</li>
+        <li>Continue cooking for an additional 2-3 minutes, then remove from heat and stir in the butter and vanilla extract.</li>
+        <li>Pour the filling over the bananas in the pie crust. Smooth the top with a spatula. Refrigerate for at least 4 hours or until set.</li>
+        
+        <!-- Prepare the Whipped Cream Topping -->
+        <li>In a medium bowl, beat the heavy cream, powdered sugar, and vanilla extract with an electric mixer until stiff peaks form.</li>
+        <li>Spread the whipped cream over the chilled pie.</li>
+        
+        <!-- Serve -->
+        <li>Slice and serve the pie. Enjoy!</li>
+    </ol>
+
+    <a href="recipe2.html">Back to Recipes</a>
+</div>
+</body>
+</html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-description, ul, ol {
+    margin: 20px 0;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Changer</title>
+    <style>
+       
+
+        .font-selector {
+            margin-bottom: 600px; /* Space below the font selector */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+        }
+
+        label {
+            font-size: 1.2em; /* Larger font size for the label */
+            margin-right: 10px; /* Space between label and dropdown */
+            color: #4a4a4a; /* Color for the label */
+        }
+
+        select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 1em; /* Font size for the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #4a90e2; /* Border color */
+            background-color: #ffffff; /* Background color for the dropdown */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        select:hover {
+            border-color: #007bff; /* Change border color on hover */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover */
+        }
+
+        option {
+            padding: 10px; /* Space inside options */
+        }
+    </style>
+</head>
+<body>
+    <div class="font-selector">
+        <label for="font-style-select">Select Font Style:</label>
+        <select id="font-style-select">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Georgia', serif">Georgia</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Tahoma', sans-serif">Tahoma</option>
+            <option value="'Verdana', sans-serif">Verdana</option>
+        </select>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fontStyleSelect = document.getElementById('font-style-select');
+
+            // Load saved font style from local storage
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.body.style.fontFamily = savedFont;
+                fontStyleSelect.value = savedFont; // Set the dropdown to the saved font
+            }
+
+            const changeFontStyle = () => {
+                document.body.style.fontFamily = fontStyleSelect.value; // Change font style
+                localStorage.setItem('selectedFont', fontStyleSelect.value); // Save font style to local storage
+            };
+
+            fontStyleSelect.addEventListener('click', changeFontStyle);
+            fontStyleSelect.addEventListener('change', changeFontStyle);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Apple Strudel</title>
+    <link rel="stylesheet" href="method.css">
+</head>
+<body>
+
+    <h1>Easy Apple Strudel</h1>
+    
+    <!-- Recipe Description -->
+    <div class="recipe-description">
+        <p>This Easy Apple Strudel is a simple and delicious pastry that combines tender apples with a flaky crust. Perfect for a quick dessert or a special treat, it’s a classic that’s sure to please everyone.</p>
+   
+
+    <!-- Ingredients Section -->
+    <h2>Ingredients</h2>
+    <ul>
+        <!-- Strudel Dough -->
+        <li>1 package of store-bought phyllo dough (about 16 oz), thawed</li>
+        <li>1/2 cup unsalted butter, melted</li>
+        
+        <!-- Apple Filling -->
+        <li>4 medium apples, peeled, cored, and thinly sliced</li>
+        <li>1/2 cup granulated sugar</li>
+        <li>1/4 cup brown sugar</li>
+        <li>1 teaspoon ground cinnamon</li>
+        <li>1/4 teaspoon ground nutmeg</li>
+        <li>1 tablespoon lemon juice</li>
+        <li>1/4 cup raisins (optional)</li>
+        <li>1/4 cup chopped walnuts or pecans (optional)</li>
+        
+        <!-- To Serve -->
+        <li>Powdered sugar (for dusting)</li>
+        <li>Vanilla ice cream or whipped cream (optional)</li>
+    </ul>
+
+    <!-- Method Section -->
+    <h2>Method</h2>
+    <ol>
+        <!-- Prepare the Apple Filling -->
+        <li>In a large bowl, combine the sliced apples, granulated sugar, brown sugar, cinnamon, nutmeg, lemon juice, raisins, and nuts (if using). Toss until the apples are well coated.</li>
+        
+        <!-- Assemble the Strudel -->
+        <li>Preheat the oven to 375°F (190°C). Line a baking sheet with parchment paper.</li>
+        <li>Place one sheet of phyllo dough on a clean surface and brush it lightly with melted butter. Place another sheet of phyllo on top and brush with butter. Repeat this process with 5-6 sheets of phyllo.</li>
+        <li>Spoon the apple filling down the center of the phyllo dough, leaving about 2 inches on each side. Carefully fold the sides of the phyllo over the filling and then roll it up from one end to the other, creating a log shape.</li>
+        <li>Transfer the strudel to the prepared baking sheet and brush the top with the remaining melted butter.</li>
+        <li>Bake for 30-35 minutes, or until the strudel is golden brown and crispy.</li>
+        <li>Allow the strudel to cool slightly before dusting with powdered sugar and serving with vanilla ice cream or whipped cream, if desired.</li>
+    </ol>
+
+    <a href="recipe.html">Back to Recipes</a>
+</div>
+
+</body>
+</html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-description, ul, ol {
+    margin: 20px 0;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Changer</title>
+    <style>
+       
+        .font-selector {
+            margin-bottom: 600px; /* Space below the font selector */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+        }
+
+        label {
+            font-size: 1.2em; /* Larger font size for the label */
+            margin-right: 10px; /* Space between label and dropdown */
+            color: #4a4a4a; /* Color for the label */
+        }
+
+        select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 1em; /* Font size for the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #4a90e2; /* Border color */
+            background-color: #ffffff; /* Background color for the dropdown */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        select:hover {
+            border-color: #007bff; /* Change border color on hover */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover */
+        }
+
+        option {
+            padding: 10px; /* Space inside options */
+        }
+    </style>
+</head>
+<body>
+    <div class="font-selector">
+        <label for="font-style-select">Select Font Style:</label>
+        <select id="font-style-select">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Georgia', serif">Georgia</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Tahoma', sans-serif">Tahoma</option>
+            <option value="'Verdana', sans-serif">Verdana</option>
+        </select>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fontStyleSelect = document.getElementById('font-style-select');
+
+            // Load saved font style from local storage
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.body.style.fontFamily = savedFont;
+                fontStyleSelect.value = savedFont; // Set the dropdown to the saved font
+            }
+
+            const changeFontStyle = () => {
+                document.body.style.fontFamily = fontStyleSelect.value; // Change font style
+                localStorage.setItem('selectedFont', fontStyleSelect.value); // Save font style to local storage
+            };
+
+            fontStyleSelect.addEventListener('click', changeFontStyle);
+            fontStyleSelect.addEventListener('change', changeFontStyle);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>

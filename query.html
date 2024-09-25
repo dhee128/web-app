@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Query</title>
+  <link rel="stylesheet" href="style.css">
+
+  <body></body>
+    <nav class="navbar">
+        <ul>
+            <h2>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="food.html">Nutrition</a></li>
+            <li><a href="recipe.html">Recipe</a></li>
+            <li><a href="query.html">Query</a></li>
+
+            </h2>
+        </ul>
+    </nav>
+    <!-- The rest of your page content goes here -->
+    
+    <!-- Include your specific JavaScript file -->
+    <script src="script.js"></script>
+</body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(bgg2.jpg);
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color:transparent;
+      padding: 20px;
+
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #333;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .alert {
+      padding: 10px;
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Submit Your Query</h2>
+  <div id="alert-box" class="alert"></div>
+  <form action="submit_query.php" method="POST" id="queryForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Enter your query or feedback here..." required></textarea>
+
+    <input type="submit" value="Submit Query">
+  </form>
+</div>
+
+<script>
+  // Frontend validation (optional) or handle response after submission
+  document.getElementById('queryForm').addEventListener('submit', function(e) {
+    var alertBox = document.getElementById('alert-box');
+    alertBox.style.display = 'none'; // Hide the alert box initially
+
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value.trim();
+    var message = document.getElementById('message').value.trim();
+
+    if (name === '' || email === '' || subject === '' || message === '') {
+      e.preventDefault(); // Prevent form submission
+      alertBox.innerText = 'All fields are required!';
+      alertBox.style.display = 'block'; // Show the alert box
+    }
+  });
+</script>
+
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>

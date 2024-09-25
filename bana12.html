@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Puff Stuffed in Banana Leaf</title>
+    <link rel="stylesheet" href="method.css">
+</head>
+<body>
+
+    <h1>Banana Puff Stuffed in Banana Leaf</h1>
+    
+    <!-- Recipe Description -->
+    <div class="recipe-description">
+        <p>Banana Puff Stuffed in Banana Leaf is a traditional and flavorful dish where ripe bananas are blended with spices and stuffed in banana leaves before being steamed or grilled. This dish combines the natural sweetness of bananas with aromatic spices for a delightful treat.</p>
+    
+
+    <!-- Ingredients Section -->
+    <h2>Ingredients</h2>
+    <ul>
+        <li>4 ripe bananas, peeled and mashed</li>
+        <li>1/2 cup grated coconut (fresh or desiccated)</li>
+        <li>1/4 cup jaggery or brown sugar, grated</li>
+        <li>1/4 teaspoon cardamom powder</li>
+        <li>1/4 teaspoon cinnamon powder</li>
+        <li>1 tablespoon chopped nuts (optional, such as cashews or almonds)</li>
+        <li>Banana leaves, cut into squares (for wrapping)</li>
+        <li>Water (for steaming)</li>
+    </ul>
+
+    <!-- Method Section -->
+    <h2>Method</h2>
+    <ol>
+        <!-- Prepare the Filling -->
+        <li>In a mixing bowl, combine the mashed bananas, grated coconut, jaggery (or brown sugar), cardamom powder, cinnamon powder, and chopped nuts if using. Mix well until all ingredients are evenly combined.</li>
+        
+        <!-- Prepare the Banana Leaves -->
+        <li>Soften the banana leaves by passing them over an open flame or blanching them in boiling water for a few seconds. This makes them pliable and easier to fold.</li>
+        
+        <!-- Assemble the Puffs -->
+        <li>Cut the banana leaves into squares, approximately 6-8 inches wide.</li>
+        <li>Place a spoonful of the banana mixture in the center of each banana leaf square.</li>
+        <li>Fold the edges of the banana leaf over the filling to form a neat package. Secure with toothpicks if necessary.</li>
+        
+        <!-- Cook the Puffs -->
+        <li>Arrange the wrapped puffs in a steamer basket or on a rack over a pot of boiling water. Steam for 15-20 minutes, or until the puffs are firm and cooked through.</li>
+        
+        <!-- Serve -->
+        <li>Allow the puffs to cool slightly before unwrapping. Serve warm as a delicious snack or dessert.</li>
+    </ol>
+
+    <a href="recipe2.html">Back to Recipes</a>
+</div>
+</body>
+</html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe-description, ul, ol {
+    margin: 20px 0;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Changer</title>
+    <style>
+       
+
+        .font-selector {
+            margin-bottom: 600px; /* Space below the font selector */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+        }
+
+        label {
+            font-size: 1.2em; /* Larger font size for the label */
+            margin-right: 10px; /* Space between label and dropdown */
+            color: #4a4a4a; /* Color for the label */
+        }
+
+        select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 1em; /* Font size for the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #4a90e2; /* Border color */
+            background-color: #ffffff; /* Background color for the dropdown */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        select:hover {
+            border-color: #007bff; /* Change border color on hover */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover */
+        }
+
+        option {
+            padding: 10px; /* Space inside options */
+        }
+    </style>
+</head>
+<body>
+    <div class="font-selector">
+        <label for="font-style-select">Select Font Style:</label>
+        <select id="font-style-select">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="'Georgia', serif">Georgia</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Tahoma', sans-serif">Tahoma</option>
+            <option value="'Verdana', sans-serif">Verdana</option>
+        </select>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fontStyleSelect = document.getElementById('font-style-select');
+
+            // Load saved font style from local storage
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.body.style.fontFamily = savedFont;
+                fontStyleSelect.value = savedFont; // Set the dropdown to the saved font
+            }
+
+            const changeFontStyle = () => {
+                document.body.style.fontFamily = fontStyleSelect.value; // Change font style
+                localStorage.setItem('selectedFont', fontStyleSelect.value); // Save font style to local storage
+            };
+
+            fontStyleSelect.addEventListener('click', changeFontStyle);
+            fontStyleSelect.addEventListener('change', changeFontStyle);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>

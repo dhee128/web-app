@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Selection</title>
+    <link rel="stylesheet" href="recipe.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Select a recipe</h2>
+        <div class="recipe-grid">
+            <div class="recipe-item">
+                <a href="bw1.html">
+                <img src="https://www.kannammacooks.com/wp-content/uploads/samba-godumai-ravai-upma-9.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw2.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_b5NyFWeBuZgafgg96bkPQHkVziDNmETw-g&s">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw3.html">
+                <img src="https://www.sharmispassions.com/wp-content/uploads/2016/10/30476230131_e81f44ffe5_o.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw4.html">
+                <img src="https://www.sailusfood.com/wp-content/uploads/2017/03/instant-godhuma-rava-idli.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw5.html">
+                <img src="https://www.jeyashriskitchen.com/wp-content/uploads/2016/07/godhuma-rava-payasam.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw6.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Ui_QxKMikMzABe_ndP1LPBNDxHO4_VaaUQ&s">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw7.html">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/11/DH/XG/XW/10698463/sugar-free-samba-wheat-halwa-500x500.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw8.html">
+                <img src="https://cookwithrenu.com/wp-content/uploads/2021/12/Eggless-Rava-Cake_Featured-Image.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw9.html">
+                <img src="https://www.inspiredtaste.net/wp-content/uploads/2016/07/Whole-Wheat-Pancakes-Recipe-2-1200.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw10.html">
+                <img src="https://sallysbakingaddiction.com/wp-content/uploads/2024/01/whole-wheat-sandwich-bread-2.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw11.html">
+                <img src="https://i.ytimg.com/vi/2FrjORGOWFI/maxresdefault.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw12.html">
+                <img src="https://www.jocooks.com/wp-content/uploads/2013/12/no-knead-whole-wheat-bread-1-18.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw13.html">
+                <img src="https://www.junedarville.com/wp-content/uploads/2016/12/wheat-recipes.jpg.webp">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw14.html">
+                <img src="https://cdn.loveandlemons.com/wp-content/uploads/2020/10/wheat-berry-salad.jpg">
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="bw15.html">
+                <img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/recipe_legacy/1873-3-large.jpg?itok=ZBsCUWV5">
+                </a>
+            </div>  
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="recipe14.html" class="previous-page-button">Previous Page</a>
+    </div>
+    <div class="pagination">
+        <a href="recipe16.html" class="next-page-button">Next Page</a>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Changer</title>
+    <style>
+        body {
+            font-family: sans-serif; /* Default font style */
+            color: #333; /* Default text color */
+            padding: 20px; /* Add some padding */
+        }
+
+        .font-selector {
+            margin-bottom: 600px; /* Space below the font selector */
+            
+        }
+
+        label {
+            font-size: 1.2em; /* Larger font size for the label */
+            margin-right: 10px; /* Space between label and dropdown */
+            color: #4a4a4a; /* Color for the label */
+        }
+
+        select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 1em; /* Font size for the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #4a90e2; /* Border color */
+            background-color: #ffffff; /* Background color for the dropdown */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        select:hover {
+            border-color: #007bff; /* Change border color on hover */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover */
+        }
+
+        option {
+            padding: 10px; /* Space inside options */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fontStyleSelect = document.getElementById('font-style-select');
+
+            // Load saved font style from local storage
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.body.style.fontFamily = savedFont;
+                fontStyleSelect.value = savedFont; // Set the dropdown to the saved font
+            }
+
+            const changeFontStyle = () => {
+                document.body.style.fontFamily = fontStyleSelect.value; // Change font style
+                localStorage.setItem('selectedFont', fontStyleSelect.value); // Save font style to local storage
+            };
+
+            fontStyleSelect.addEventListener('click', changeFontStyle);
+            fontStyleSelect.addEventListener('change', changeFontStyle);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>

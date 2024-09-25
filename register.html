@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bgg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            margin: 50px auto;
+            width: 300px;
+        }
+        .container label {
+            text-align: left;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+         input[type="number"]::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+           margin: 0;
+        }
+        .container input[type="text"],
+        .container input[type="number"],
+        .container input[type="password"],
+        .container input[type="date"],
+        .container select[id=city] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1a6613;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        button:hover {
+            background-color: #0e801f;
+            background: linear-gradient(to right, rgb(18, 171, 18), #09a320);
+        }
+        .toggle-form {
+            margin-top: 20px;
+            cursor: pointer;
+            color: #2f00ff;
+        }
+        .alert {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h2>Register Here</h2>
+             
+            <form action="register.php" method="post">
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="username" placeholder="Enter Username" required><br><br>
+                
+                <label for="Contact">Contact:</label>
+                <input type="number" id="Contact" name="contact" placeholder="Enter Contact" required><br><br>
+                
+                <label for="DateOfBirth">Date of Birth:</label>
+                <input type="date" id="DateOfBirth" name="date_of_birth" placeholder="Enter DateOfBirth" required><br><br>
+
+                <label for="city">Select your city:</label>
+                <select id="city" name="city" required>
+                    <option value="">Select your city</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="coimbatore">Coimbatore</option>
+                    <option value="madurai">Madurai</option>
+                    <option value="trichy">Tiruchirappalli (Trichy)</option>
+                    <option value="salem">Salem</option>
+                    <option value="tirunelveli">Tirunelveli</option>
+                    <option value="vellore">Vellore</option>
+                    <option value="thanjavur">Thanjavur</option>
+                    <option value="ooty">Ooty (Udhagamandalam)</option>
+                    <option value="erode">Erode</option>
+                    <option value="tiruppur">Tiruppur</option>
+                    <option value="kanyakumari">Kanyakumari</option>
+                    <option value="karur">Karur</option>
+                    <option value="dindigul">Dindigul</option>
+                    <option value="cuddalore">Cuddalore</option>
+                    <option value="nagercoil">Nagercoil</option>
+                    <option value="hosur">Hosur</option>
+                    <option value="sivakasi">Sivakasi</option>
+                    <option value="thoothukudi">Thoothukudi (Tuticorin)</option>
+                    <option value="rajapalayam">Rajapalayam</option>
+                    <option value="ramanathapuram">Ramanathapuram</option>
+                </select><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password" required><br><br>
+                
+                <button type="submit">Register</button>
+            </form>
+            <a href="login.html">Back to Login Page</a>
+        </center>
+    </div>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Style Changer</title>
+    <style>
+        body {
+            font-family: sans-serif; /* Default font style */
+            color: #333; /* Default text color */
+            padding: 20px; /* Add some padding */
+        }
+
+        .font-selector {
+            margin-bottom: 600px; /* Space below the font selector */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+        }
+
+        label {
+            font-size: 1.2em; /* Larger font size for the label */
+            margin-right: 10px; /* Space between label and dropdown */
+            color: #4a4a4a; /* Color for the label */
+        }
+
+        select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 1em; /* Font size for the dropdown */
+            border-radius: 5px; /* Rounded corners */
+            border: 2px solid #4a90e2; /* Border color */
+            background-color: #ffffff; /* Background color for the dropdown */
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+
+        select:hover {
+            border-color: #007bff; /* Change border color on hover */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover */
+        }
+
+        option {
+            padding: 10px; /* Space inside options */
+        }
+    </style>
+</head>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fontStyleSelect = document.getElementById('font-style-select');
+
+            // Load saved font style from local storage
+            const savedFont = localStorage.getItem('selectedFont');
+            if (savedFont) {
+                document.body.style.fontFamily = savedFont;
+                fontStyleSelect.value = savedFont; // Set the dropdown to the saved font
+            }
+
+            const changeFontStyle = () => {
+                document.body.style.fontFamily = fontStyleSelect.value; // Change font style
+                localStorage.setItem('selectedFont', fontStyleSelect.value); // Save font style to local storage
+            };
+
+            fontStyleSelect.addEventListener('click', changeFontStyle);
+            fontStyleSelect.addEventListener('change', changeFontStyle);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontSizeSelect = document.getElementById('font-size-select');
+
+        // Load saved font size from local storage
+        const savedFontSize = localStorage.getItem('selectedFontSize') || 'medium';
+        document.body.style.fontSize = savedFontSize === 'small' ? '12px' : savedFontSize === 'large' ? '20px' : '16px';
+        fontSizeSelect.value = savedFontSize; // Set the dropdown to the saved font size
+
+        const changeFontSize = () => {
+            const newSize = fontSizeSelect.value;
+            document.body.style.fontSize = newSize === 'small' ? '12px' : newSize === 'large' ? '20px' : '16px'; // Change font size
+            localStorage.setItem('selectedFontSize', newSize); // Save font size to local storage
+        };
+
+        fontSizeSelect.addEventListener('change', changeFontSize);
+    });
+</script>
